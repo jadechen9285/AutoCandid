@@ -1,0 +1,35 @@
+[project]
+name = "autocandid"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jianhong Chen", email = "jjianhongchen@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "huggingface-hub[hf-transfer]>=1.30.0",
+    "pydantic>=2.13.5",
+    "socksio>=1.0.0",
+    "vllm>=0.28.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.4",
+    "ruff>=0.16.9",
+]
+
+
